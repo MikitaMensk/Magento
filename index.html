@@ -5,6 +5,12 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <title>Triboo</title>
         <link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<style>
+		.main {
+			min-height: 700px;
+		}
+		</style>
     </head>
     <body>
         <section class="pre-header">
@@ -142,8 +148,13 @@
 			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
 			  crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function(){
-			alert('ok');
-        });
+    $(document).ready(function(){
+		$(window).on('scroll',function(){
+			if($(window).scrollTop()>300){
+				console.log($(window).scrollTop());
+				$(window).off('scroll');
+			}
+		});
+    });
     </script>
 </html>
